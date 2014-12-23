@@ -24,10 +24,10 @@
         "loggin": "2.1.0",
         "lodash-node": "2.4.1",
         "vow-fs": "0.3.4",
-        "fist": "3.x"
+        "fist": "~3"
     },
     "peerDependencies": {
-        "fist": "3.x"
+        "fist": "~3"
     },
     "license": "MIT",
     "main": "_fistlabs_unit_serial.js",
