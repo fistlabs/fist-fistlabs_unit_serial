@@ -3,13 +3,13 @@
 var Deque = /** @type Deque */ require('double-ended-queue');
 var vow = require('vow');
 
-module.exports = function (agent) {
+module.exports = function (app) {
 
     /**
      * @class _fistlabs_unit_serial
      * @extends Unit
      * */
-    agent.unit({
+    app.unit({
 
         /**
          * @public
