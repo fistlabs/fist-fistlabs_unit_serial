@@ -1,0 +1,43 @@
+{
+    "author": "Golyshev Dmitrii <golyshev.dmitry@yandex.ru>",
+    "bugs": {
+        "url": "https://github.com/fistlabs/fist-fistlabs_unit_serial/issues"
+    },
+    "contributors": [
+        "Golyshev Dmitrii <golyshev.dmitry@yandex.ru>"
+    ],
+    "dependencies": {
+        "vow": "0.4.7",
+        "double-ended-queue": "2.0.0-0"
+    },
+    "description": "fist plugit which provides serial unit",
+    "devDependencies": {
+        "glob": "4.3.2",
+        "gulp": "3.8.10",
+        "gulp-mocha": "2.0.0",
+        "gulp-istanbul": "0.5.0",
+        "eslint": "0.10.2",
+        "gulp-util": "3.0.1",
+        "through2": "0.6.3",
+        "minimatch": "2.0.1",
+        "gulp-jscs": "1.3.1",
+        "loggin": "2.1.0",
+        "lodash-node": "2.4.1",
+        "vow-fs": "0.3.4",
+        "fist": "3.x"
+    },
+    "peerDependencies": {
+        "fist": "3.x"
+    },
+    "license": "MIT",
+    "main": "_fistlabs_unit_serial.js",
+    "name": "fist-fistlabs_unit_serial",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/fistlabs/fist-fistlabs_unit_serial.git"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "version": "0.0.1"
+}
