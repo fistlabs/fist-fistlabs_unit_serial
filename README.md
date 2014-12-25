@@ -31,5 +31,7 @@ app.unit({
 After each step the unit keep previous step returned value in ```context.prev``` property.
 Last step result is a unit execution result. If one of steps was rejected, the unit will try to call ```e<stepName>``` method as fallback if exists, but other methods will not be called. To stop steps execution propagation, call ```context.series.clear()```
 
+Any step can be asynchronous if returned promise
+
 ---------
 LICENSE [MIT](LICENSE)
