@@ -7,22 +7,22 @@
         "Golyshev Dmitrii <golyshev.dmitry@yandex.ru>"
     ],
     "dependencies": {
-        "vow": "0.4.7",
-        "double-ended-queue": "2.0.0-0"
+        "vow": "0.4.8",
+        "double-ended-queue": "2.1.0-0"
     },
     "description": "fist plugit which provides serial unit",
     "devDependencies": {
-        "glob": "4.3.2",
+        "glob": "4.3.5",
         "gulp": "3.8.10",
         "gulp-mocha": "2.0.0",
         "gulp-istanbul": "0.5.0",
-        "eslint": "0.10.2",
-        "gulp-util": "3.0.1",
+        "eslint": "0.13.0",
+        "gulp-util": "3.0.2",
         "through2": "0.6.3",
         "minimatch": "2.0.1",
-        "gulp-jscs": "1.3.1",
-        "loggin": "2.1.0",
-        "lodash-node": "2.4.1",
+        "gulp-jscs": "1.4.0",
+        "loggin": "2.2.1",
+        "lodash-node": "3.0.0",
         "vow-fs": "0.3.4",
         "fist": "~3"
     },

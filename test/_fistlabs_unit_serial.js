@@ -26,7 +26,7 @@ describe('fist_plugins/units/_fistlabs_unit_serial', function () {
             foo: function () {
                 return 1;
             },
-            bar: function (track, context) {
+            bar: function (t, context) {
                 return context.prev + 1;
             }
         });
@@ -47,18 +47,20 @@ describe('fist_plugins/units/_fistlabs_unit_serial', function () {
             base: '_fistlabs_unit_serial',
             name: 'serial',
             series: ['foo', 'bar'],
-            foo: function (track) {
-                track._isFlushed = true;
+            foo: function (t) {
+                t.isFlushed = function () {
+                    return true;
+                };
                 return 1;
             },
-            bar: function (track, context) {
+            bar: function (t, context) {
                 return context.prev + 1;
             }
         });
 
         agent.ready().done(function () {
             track.invoke('serial').done(function (res) {
-                assert.strictEqual(res, null);
+                assert.strictEqual(res, 1);
                 done();
             });
         });
@@ -75,11 +77,11 @@ describe('fist_plugins/units/_fistlabs_unit_serial', function () {
             foo: function () {
                 throw 1;
             },
-            efoo: function (track, context) {
+            efoo: function (t, context) {
                 assert.strictEqual(context.prev, 1);
                 return 42;
             },
-            bar: function (track, context) {
+            bar: function (t, context) {
                 return context.prev + 1;
             }
         });
@@ -103,7 +105,7 @@ describe('fist_plugins/units/_fistlabs_unit_serial', function () {
             foo: function () {
                 throw 1;
             },
-            bar: function (track, context) {
+            bar: function (t, context) {
                 return context.prev + 1;
             }
         });
@@ -124,12 +126,12 @@ describe('fist_plugins/units/_fistlabs_unit_serial', function () {
             base: '_fistlabs_unit_serial',
             name: 'serial',
             series: ['foo', 'bar'],
-            foo: function (track, context) {
+            foo: function (t, context) {
                 context.series.clear();
                 return 1;
             },
-            bar: function (track) {
-                return track.prev + 1;
+            bar: function (t) {
+                return t.prev + 1;
             }
         });
 

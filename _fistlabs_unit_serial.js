@@ -63,8 +63,8 @@ function next(self, track, context) {
 
     return vow.invoke(function () {
         return self[name].call(self, track, context);
-    }).then(function (result) {
-        context.prev = result;
+    }).then(function (res) {
+        context.prev = res;
         return next(self, track, context);
     }, function (err) {
         var func = self['e' + name];
@@ -73,11 +73,11 @@ function next(self, track, context) {
         context.series.clear();
 
         if (typeof func === 'function') {
-            track.logger.warn('Failed to execute "%s", running "e%s"', name, name);
+            track.logger.debug('Failed to execute "%s", running "e%s"', name, name);
             return func.call(self, track, context);
         }
 
-        context.logger.error('Failed to execute "%s"', name);
+        context.logger.debug('Failed to execute "%s"', name);
         throw context.prev;
     });
 }
