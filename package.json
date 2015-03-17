@@ -10,7 +10,7 @@
         "vow": "0.4.8",
         "double-ended-queue": "2.1.0-0"
     },
-    "description": "fist plugit which provides serial unit",
+    "description": "fist plugin which provides serial unit",
     "devDependencies": {
         "glob": "4.3.5",
         "gulp": "3.8.10",
