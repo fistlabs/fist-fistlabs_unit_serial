@@ -15,13 +15,6 @@ module.exports = function (app) {
          * @public
          * @memberOf {_fistlabs_unit_serial}
          * @property
-         * */
-        base: 0,
-
-        /**
-         * @public
-         * @memberOf {_fistlabs_unit_serial}
-         * @property
          * @type {String}
          * */
         name: '_fistlabs_unit_serial',
