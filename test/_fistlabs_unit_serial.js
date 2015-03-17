@@ -9,9 +9,14 @@ var assert = require('assert');
 var logger = require('loggin');
 
 function getAgent(params) {
-    var agent = new Core(params);
-    agent.install(require.resolve('../_fistlabs_unit_serial'));
-    return agent;
+    var app = new Core(params);
+
+    app.logger.conf({
+        logLevel: 'SILENT'
+    });
+
+    app.install(require.resolve('../_fistlabs_unit_serial'));
+    return app;
 }
 
 describe('fist_plugins/units/_fistlabs_unit_serial', function () {
